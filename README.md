@@ -6,8 +6,9 @@ Submitted by: **Stella Kim **
 
 Time spent: **4** hours spent in total
 
-Link to project: https://glitch.com/edit/#!/pale-admitted-parent
-https://pale-admitted-parent.glitch.me
+Link to project code : https://glitch.com/edit/#!/pale-admitted-parent 
+
+Link to live site: https://pale-admitted-parent.glitch.me
 
 ## Required Functionality
 
@@ -26,7 +27,7 @@ The following **optional** features are implemented:
 * [X] Any HTML page elements (including game buttons) has been styled differently than in the tutorial
 * [X] Buttons use a pitch (frequency) other than the ones in the tutorial
 * [X] More than 4 functional game buttons
-* [X] Playback speeds up on each turn
+* [X] Playback speeds up on each turn (EACH TURN SPEEDS UP BY INCREMENTS OF 50) 
 * [X] Computer picks a different pattern each time the game is played
 * [X] Player only loses after 3 mistakes (instead of on the first mistake)
 * [X] Game button appearance change goes beyond color (e.g. add an image)
@@ -40,8 +41,12 @@ The following **additional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
-![](your-link-here)
-
+* Showcasing Winning the Game
+![](memory.gif)
+* Showcasing Losing the Game after 3 mistakes
+![](memory1.gif)
+* Showcasing randomized pattern every new game 
+![](memory2.gif)
 
 ## Reflection Questions
 1. If you used any outside resources to help complete your submission (websites, books, people, etc) list them here. 
