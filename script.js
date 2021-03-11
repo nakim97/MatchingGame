@@ -3,7 +3,7 @@ const cluePauseTime = 333; //how long to pause in between clues
 const nextClueWaitTime = 1000; //how long to wait before starting playback of the clue sequence
 
 // Set up the global variables
-var clueHoldTime = 2000; //how long to hold each clue's light/sound
+var clueHoldTime = 1500; //how long to hold each clue's light/sound
 var pattern = [2, 5, 1, 4, 3, 6, 1, 2, 4, 6, 3, 5];
 var progress = 0;
 var guessLose = 0; // keep track of number of mistakes
@@ -58,7 +58,7 @@ function playSingleClue(btn) {
 
 // Function to reset clue playback speed
 function resetSpeed() {
-  clueHoldTime = 2000;
+  clueHoldTime = 1500;
 }
 
 // Function to play a sequence of clues
