@@ -184,6 +184,14 @@ button {
   font-size: 10px;
 }
 
+/* style the strikes left */
+#strikeCounter{
+  color:white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align:right;
+}
+
 /* Making things responsive! */ 
 @media only screen and (max-width:582px){
   h1{
@@ -220,3 +228,5 @@ button {
   margin-bottom: 10px;
   ]
 }
+
+

@@ -1,17 +1,17 @@
 // Set up  global constants
 const cluePauseTime = 333; //how long to pause in between clues
-const nextClueWaitTime = 1000; //how long to wait before starting playback of the clue sequence
+const nextClueWaitTime = 1500; //how long to wait before starting playback of the clue sequence
 
 // Set up the global variables
 var clueHoldTime = 1500; //how long to hold each clue's light/sound
 var pattern = [2, 5, 1, 4, 3, 6, 1, 2, 4, 6, 3, 5];
 var progress = 0;
-var guessLose = 0; // keep track of number of mistakes
+var guessLose = 3; // keep track of number of mistakes
 var gamePlaying = false;
 var tonePlaying = false;
 var volume = 0.5; // must be between 0.0 and 1.0
 var guessCounter = 0;
-
+document.getElementById("counter").innerHTML = guessLose;
 // Function to start game
 function startGame() {
   //initialize game variables
@@ -22,6 +22,7 @@ function startGame() {
   randomGenerator();
   resetSpeed();
   playClueSequence();
+  
 }
 
 // function to randomly generate a pattern
@@ -89,7 +90,7 @@ function winGame() {
 
 // Function to reset strike count
 function resetStrike() {
-  guessLose = 0;
+  guessLose = 3;
 }
 
 // Function to keep track of guesses
@@ -113,13 +114,14 @@ function guess(btn) {
   } else {
     // if user makes 3 mistakes, lose game and reset
     if (pattern[guessCounter] != btn) {
-      guessLose++;
-      if (guessLose == 3) {
+      guessLose--;
+      if (guessLose == 0) {
         resetStrike();
         loseGame();
       }
     }
   }
+  document.getElementById("counter").innerHTML = guessLose;
 }
 
 // Sound Synthesis Functions
