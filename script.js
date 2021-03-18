@@ -124,6 +124,8 @@ function guess(btn) {
   document.getElementById("counter").innerHTML = guessLose;
 }
 
+
+
 // Sound Synthesis Functions
 const freqMap = {
   1: 261.6,

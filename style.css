@@ -39,6 +39,7 @@ button {
   margin-top: 20px;
   margin-bottom: 30px;
   
+  
 }
 
 /* Style the container holding buttons */
@@ -189,7 +190,7 @@ button {
   color:white;
   margin-top: 20px;
   margin-bottom: 20px;
-  text-align:right;
+  font-family: "Courier New", monospace;
 }
 
 /* Making things responsive! */ 
@@ -224,9 +225,11 @@ button {
   font-weight: bolder;
   font-size: 10px;
 }
-.container[
-  margin-bottom: 10px;
-  ]
+  .container{
+     margin-bottom:10px;
+  }
+ 
+  
 }
 
 
