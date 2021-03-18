@@ -4,7 +4,7 @@ const nextClueWaitTime = 1500; //how long to wait before starting playback of th
 
 // Set up the global variables
 var clueHoldTime = 2000; //how long to hold each clue's light/sound
-var pattern = [2, 5, 1, 4, 3, 6, 1, 2, 4, 6, 3, 5];
+var pattern = [2, 5, 1];
 var progress = 0;
 var guessLose = 3; // keep track of number of mistakes
 var gamePlaying = false;
@@ -123,6 +123,8 @@ function guess(btn) {
   }
   document.getElementById("counter").innerHTML = guessLose;
 }
+
+
 
 // Sound Synthesis Functions
 const freqMap = {
