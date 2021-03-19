@@ -193,6 +193,11 @@ button {
   font-family: "Courier New", monospace;
 }
 
+/* style the timer countdown */
+#countdown{
+  font-family: "Courier New", monospace;
+}
+
 /* Making things responsive! */ 
 @media only screen and (max-width:582px){
   h1{
