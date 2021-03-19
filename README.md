@@ -43,10 +43,18 @@ The following **additional** features are implemented:
 Here's a walkthrough of implemented user stories:
 * Showcasing Winning the Game
 ![](memory.gif)
+
 * Showcasing Losing the Game after 3 mistakes
 ![](memory1.gif)
+
 * Showcasing randomized pattern every new game 
 ![](memory2.gif)
+
+* Showcasing running out time and losing the game
+![](memory3.gif)
+
+* Showcasing timer 
+![](memory4.gif)
 
 ## Reflection Questions
 1. If you used any outside resources to help complete your submission (websites, books, people, etc) list them here. 
@@ -56,7 +64,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript
 * Credit for icons: http://www.classicgaming.cc/classics/pac-man/icons
 
 2. What was a challenge you encountered in creating this submission (be specific)? How did you overcome it? (recommended 200 - 400 words) 
-* A challenge that I encountered while creating this submission was working on the JavaScript components. As Javascript is a language that I learned recently, I found it a bit difficult when trying to work on implementing features such as : speeding up the playback, generating a random pattern, counting guesses, and giving 3 strikes. Initially, I thought that adding these features were pretty straightforward. However I realized that I found it challenging to figure out what function/variables to create and where to place them.
+* A challenge that I encountered while creating this submission was working on the JavaScript components. As Javascript is a language that I learned recently, I found it a bit difficult when trying to work on implementing features such as : speeding up the playback, generating a random pattern, counting guesses, and giving 3 strikes. Update: I also struggled with trying to implement a timer as I was not sure where to place the function and how to implement a delay so that the timer would start AFTER the play sequence not during. I also had never worked with the timer functions in JavaScript so that was a good learning experience. Initially, I thought that adding these features were pretty straightforward. However I realized that I found it challenging to figure out what function/variables to create and where to place them.
 
 * For example, I struggled with figuring out how to keep track of mistakes a user makes as I wasn't sure how to increment the counter variable and where to place the function. Furthermore, if a user makes 3 mistakes and loses the game, how would I reset the mistake counter? 
 
@@ -82,7 +90,7 @@ consist of faster speed between playing cues, shorter playback cue hold sounds, 
 * Make the website more mobile-friendly such as changing button sizes and making the button pressing more visual, as it can be hard to tell if the button is pressed on mobile view.
 * Display the number of strikes left. Since my theme has been "retro-videogame", I would like to incorporate a display similar to displaying how many lives are left. A visual display of 3 hearts or stars, where everytime
 a user makes a mistake, the heart/star reduces by 1. 
-*  Change the alert message to something more visually appealing and mobile-friendly (ex: using sweetalert)
+* Change the alert message to something more visually appealing and mobile-friendly (ex: using sweetalert)
 
 
 
