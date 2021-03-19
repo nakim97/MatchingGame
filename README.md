@@ -45,8 +45,8 @@ Here's a walkthrough of implemented user stories:
 
 ## Reflection Questions
 1. If you used any outside resources to help complete your submission (websites, books, people, etc) list them here. 
-* Overall reference: https://www.w3schools.com/js/default.asp and 
-https://developer.mozilla.org/en-US/docs/Web/JavaScript
+* Overall reference: w3schools and mozilla firefox developers page
+* Reference used to help with timer: https://stackoverflow.com/questions/40638402/javascript-countdown-timer-with-start-stop-buttons
 * Reference used to help how to generate random pattern: https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array]
 * Credit for icons: http://www.classicgaming.cc/classics/pac-man/icons
 
