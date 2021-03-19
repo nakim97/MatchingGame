@@ -22,7 +22,6 @@ function startGame() {
   randomGenerator();
   resetSpeed();
   playClueSequence();
-  
 }
 
 // function to randomly generate a pattern
@@ -36,6 +35,7 @@ function randomGenerator() {
 // Function to stop game
 function stopGame() {
   gamePlaying = false;
+  stopTimer();
   document.getElementById("startBtn").classList.remove("hidden");
   document.getElementById("stopBtn").classList.add("hidden");
 }
@@ -44,6 +44,7 @@ function stopGame() {
 function lightButton(btn) {
   document.getElementById("button" + btn).classList.add("lit");
 }
+
 function clearButton(btn) {
   document.getElementById("button" + btn).classList.remove("lit");
 }
@@ -65,6 +66,7 @@ function resetSpeed() {
 // Function to play a sequence of clues
 function playClueSequence() {
   guessCounter = 0;
+  stopTimer();
   let delay = nextClueWaitTime; //set delay to initial wait time
   for (let i = 0; i <= progress; i++) {
     // for each clue that is revealed so far
@@ -73,7 +75,12 @@ function playClueSequence() {
     clueHoldTime = clueHoldTime - 50; // increase speed by 50 increments
     delay += clueHoldTime;
     delay += cluePauseTime;
+
+
   }
+  setTimeout(function () {
+    timerCount();
+  }, delay);
 }
 
 // Function if user loses the game
@@ -124,7 +131,31 @@ function guess(btn) {
   document.getElementById("counter").innerHTML = guessLose;
 }
 
+// function to set up timer countdown for user guesses //
+var time;
+function timerCount() {
+  time = setInterval(timer, 1000);
+  var i = 10; // user gets 10 seconds to enter their guess
+  function timer() {
+    document.getElementById("count").innerHTML = --i;
+    if (i == 0) {
+      clearInterval(time);
+      alert("SORRY YOU RAN OUT OF TIME");
+      loseGame();
+    }
+  }
+}
 
+// function to reset timer
+function stopTimer() {
+  resetTimer();
+  clearInterval(time);
+}
+
+// helper function for timer countdown
+function resetTimer() {
+  document.getElementById("count").innerHTML = "10";
+}
 
 // Sound Synthesis Functions
 const freqMap = {
@@ -135,24 +166,30 @@ const freqMap = {
   5: 500.1,
   6: 650.4
 };
+
 function playTone(btn, len) {
   o.frequency.value = freqMap[btn];
   g.gain.setTargetAtTime(volume, context.currentTime + 0.05, 0.025);
   tonePlaying = true;
-  setTimeout(function() {
+  setTimeout(function () {
     stopTone();
   }, len);
 }
+
 function startTone(btn) {
   if (!tonePlaying) {
     o.frequency.value = freqMap[btn];
     g.gain.setTargetAtTime(volume, context.currentTime + 0.05, 0.025);
     tonePlaying = true;
+
   }
 }
+
 function stopTone() {
   g.gain.setTargetAtTime(0, context.currentTime + 0.05, 0.025);
   tonePlaying = false;
+
+
 }
 
 //Page Initialization
@@ -164,4 +201,3 @@ g.connect(context.destination);
 g.gain.setValueAtTime(0, context.currentTime);
 o.connect(g);
 o.start(0);
-

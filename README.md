@@ -4,7 +4,7 @@
 
 Submitted by: Stella Kim
 
-Time spent: **4** hours spent in total
+Time spent: **5** hours spent in total
 
 Link to project code : https://glitch.com/edit/#!/pale-admitted-parent 
 
@@ -32,7 +32,7 @@ The following **optional** features are implemented:
 * [X] Player only loses after 3 mistakes (instead of on the first mistake)
 * [X] Game button appearance change goes beyond color (e.g. add an image)
 * [ ] Game button sound is more complex than a single tone (e.g. an audio file, a chord, a sequence of multiple tones)
-* [ ] User has a limited amount of time to enter their guess on each turn
+* [X] User has a limited amount of time to enter their guess on each turn (10 seconds)
 
 The following **additional** features are implemented:
 
